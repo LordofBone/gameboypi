@@ -20,6 +20,8 @@ device = uinput.Device([
     uinput.REL_Y,
     uinput.KEY_W,
     uinput.KEY_S,
+    uinput.KEY_SPACE,
+    uinput.KEY_E,
 ])
 
 try:
@@ -35,22 +37,22 @@ try:
 
         if not input_up:
             # print('Up Button Pressed')
-            device.emit(uinput.REL_Y, -15)
+            device.emit(uinput.REL_Y, -150)
             time.sleep(0.2)
 
         if not input_down:
             # print('Down Button Pressed')
-            device.emit(uinput.REL_Y, 15)
+            device.emit(uinput.REL_Y, 150)
             time.sleep(0.2)
 
         if not input_left:
             # print('Left Button Pressed')
-            device.emit(uinput.REL_X, -15)
+            device.emit(uinput.REL_X, -150)
             time.sleep(0.2)
 
         if not input_right:
             # print('Right Button Pressed')
-            device.emit(uinput.REL_X, 15)
+            device.emit(uinput.REL_X, 150)
             time.sleep(0.2)
 
         if not input_start:
@@ -60,7 +62,7 @@ try:
 
         if not input_select:
             # print('Select Button Pressed')
-            device.emit_click(uinput.KEY_S)
+            device.emit_click(uinput.KEY_SPACE)
             time.sleep(0.2)
 
         if not input_a:
